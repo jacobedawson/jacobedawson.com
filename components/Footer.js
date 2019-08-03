@@ -35,7 +35,7 @@ const Footer = () => (
   <StyledFooter className="site-footer">
     <StyledFooterNav>
       <Link href="/posts/how-i-made-this-blog">
-        <a className="made-with-love">Made w/ Next, MDX & 😅</a>
+        <a className="made-with-love">Made w/ Next.js, MDX & 😅</a>
       </Link>
       <List>
         <li>
