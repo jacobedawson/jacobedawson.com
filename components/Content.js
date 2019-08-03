@@ -2,12 +2,13 @@ import Styled from "styled-components";
 
 const StyledMain = Styled.main`
         max-width: 700px;
-        margin: auto;
-        padding: 0 1rem;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+        flex: 1 1 auto;
 `;
 
 const Content = ({ children }) => (
-  <StyledMain className="content">{children}</StyledMain>
+  <StyledMain className="site-content">{children}</StyledMain>
 );
 
 export default Content;

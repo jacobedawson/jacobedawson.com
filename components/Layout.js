@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Content from "./Content";
-import { createGlobalStyle } from "styled-components";
+import Styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-size: 10px;
   }
-  h1,h2,h3,h4,h5,h6 {
+  h1,h2,h3,h4,h5,h6, p {
     padding: 0;
     margin: 0;
   }
@@ -41,13 +41,19 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const StyledContainer = Styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
 const Layout = props => (
-  <div className="layout">
+  <StyledContainer className="site-container">
     <GlobalStyles />
     <Header />
     <Content>{props.children}</Content>
     <Footer />
-  </div>
+  </StyledContainer>
 );
 
 export default Layout;
