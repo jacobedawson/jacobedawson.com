@@ -7,6 +7,7 @@ const StyledUL = Styled.ul`
     display: inline-block;
     display: flex;
     align-items: center;
+    justify-items: center;
     li {
         margin-left: 1rem;
         display: inline;
