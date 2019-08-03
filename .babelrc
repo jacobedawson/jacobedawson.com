@@ -5,7 +5,10 @@
     [
       "module-resolver",
       {
-        "root": ["./"]
+        "root": ["./"],
+        "alias": {
+          "components": "./components"
+        }
       }
     ]
   ]
