@@ -1,6 +1,6 @@
 import Layout from "components/Layout";
 import ContentLink from "components/ContentLink";
-import * as Posts from "./posts/index";
+import * as Posts from "lib/importPosts";
 import Styled from "styled-components";
 import { mediaQueries } from "style/mediaQueries";
 
