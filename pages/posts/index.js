@@ -2,6 +2,21 @@ function importAll(r) {
   return r.keys().map(r);
 }
 
-const Posts = importAll(require.context("../posts", false, /\.mdx$/));
+const metaArray = importAll(require.context("../posts", false, /\.mdx$/));
 
-export default Posts;
+export function getSome(num) {
+  return metaArray
+    .map(({ meta }) => meta)
+    .sort((a, b) => new Date(b.published) - new Date(a.published))
+    .slice(0, num);
+}
+
+export function getAll() {
+  return metaArray
+    .map(({ meta }) => meta)
+    .map(meta => {
+      console.log(meta);
+      return meta;
+    })
+    .sort((a, b) => new Date(b.published) - new Date(a.published));
+}

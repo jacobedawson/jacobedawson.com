@@ -1,13 +1,22 @@
 import Layout from "components/Layout";
 import ContentLink from "components/ContentLink";
-import Posts from "./posts/index";
+import * as Posts from "./posts/index";
+import Styled from "styled-components";
+import { mediaQueries } from "style/mediaQueries";
+
+const StyledUL = Styled.ul`
+    list-style: none;
+    @media ${mediaQueries.mobile} {
+        padding: 0;
+    }
+`;
 
 const Index = () => {
-  const posts = Posts.map(({ meta }) => ({
-    title: meta.title,
-    published: meta.publishDate,
-    url: meta.slug,
-    id: meta.id
+  const posts = Posts.getSome(3).map(post => ({
+    title: post.title,
+    published: post.publishDate,
+    url: post.slug,
+    id: post.id
   }));
   return (
     <Layout>
@@ -16,7 +25,7 @@ const Index = () => {
         <p>
           I&apos;m Jake, a Front-End Developer & JavaScript Ecosystem Explorer
         </p>
-        <ul style={{ listStyle: "none" }}>
+        <StyledUL>
           <li>
             <p>
               🌏 I&apos;m from Sydney, Australia and live in Berlin, Germany
@@ -26,7 +35,7 @@ const Index = () => {
             <p>⌨ Currently: Front-End Dev @ 3T Software Labs</p>
           </li>
           <li>
-            <p>📈 Formerly: Conversation Rate Optimizer @ Delivery Hero</p>
+            <p>📈 Formerly: Conversion Rate Optimizer @ Delivery Hero</p>
           </li>
           <li>
             <p>⚛️ 7 Years & Counting as a JS Dev</p>
@@ -34,7 +43,7 @@ const Index = () => {
           <li>
             <p>🎸 I have a Bachelor of Music for some reason 🤷</p>
           </li>
-        </ul>
+        </StyledUL>
       </section>
       <section
         style={{

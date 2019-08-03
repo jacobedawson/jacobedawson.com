@@ -3,13 +3,14 @@ import Image from "components/Image";
 
 const About = () => (
   <Layout>
-    <h4>About</h4>
+    <h4>About Me</h4>
     <Image src="static/images/profile/jake.jpg" />
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-      consectetur iste fugiat nobis repellendus impedit nesciunt sapiente,
-      similique totam libero molestiae, qui quod incidunt illum sit cupiditate
-      error, dolorum voluptatibus?
+      I’m a lifelong learner and self-starter. I read avidly (lots of
+      non-fiction & sci-fi), create content online and also follow artistic
+      pursuits including music production & digital collage. I’m a good
+      networker, listener, and speaker, and I enjoy building strong,
+      long-lasting relationships with people.
     </p>
   </Layout>
 );

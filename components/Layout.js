@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.65;
     font-weight: 400;
     font-size: 10px;
+    color: #333;
   }
   h1,h2,h3,h4,h5,h6, p {
     padding: 0;
@@ -38,6 +39,9 @@ const GlobalStyles = createGlobalStyle`
   }
   p, a {
     font-size: calc(1.6em + 0.3vw);
+  }
+  a {
+    color: teal;
   }
 `;
 

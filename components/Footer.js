@@ -1,4 +1,5 @@
 import Styled from "styled-components";
+import { mediaQueries } from "style/mediaQueries";
 import Link from "next/link";
 import List from "components/List";
 import Icon from "components/Icon";
@@ -8,11 +9,33 @@ const StyledFooter = Styled.footer`
     padding: 2rem 0;
 `;
 
+const StyledFooterNav = Styled.nav`
+  width: 90%;
+  max-width: 1170px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  .made-with-love {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom: 2px solid;
+    }
+  }
+  @media ${mediaQueries.mobile} {
+    flex-direction: column;
+    text-align: center;
+    .made-with-love {
+      margin-bottom: 1rem;
+    }
+  }
+`;
+
 const Footer = () => (
   <StyledFooter className="site-footer">
-    <nav>
+    <StyledFooterNav>
       <Link href="/posts/how-i-made-this-blog">
-        <a>How I Made This Blog</a>
+        <a className="made-with-love">Made w/ Next, MDX & 😅</a>
       </Link>
       <List>
         <li>
@@ -30,7 +53,7 @@ const Footer = () => (
           </Link>
         </li>
         <li>
-          <Link href="https://linked.com/jacobedawson">
+          <Link href="https://www.linkedin.com/in/jacobdawson">
             <a>
               <Icon type="LinkedIn" height="24" width="24"></Icon>
             </a>
@@ -44,28 +67,28 @@ const Footer = () => (
           </Link>
         </li>
         <li>
-          <Link href="https://reddit.com/u/jacobedawson">
+          <Link href="https://www.reddit.com/user/jacobedawson">
             <a>
               <Icon type="Reddit" height="24" width="24"></Icon>
             </a>
           </Link>
         </li>
         <li>
-          <Link href="https://medium.com/jacobedawson">
+          <Link href="https://medium.com/@jacobedawson">
             <a>
               <Icon type="Medium" height="24" width="24"></Icon>
             </a>
           </Link>
         </li>
         <li>
-          <Link href="https://stackoverflow.com/jacobedawson">
+          <Link href="https://stackoverflow.com/users/1405255/jacobedawson">
             <a>
               <Icon type="StackOverflow" height="24" width="24"></Icon>
             </a>
           </Link>
         </li>
       </List>
-    </nav>
+    </StyledFooterNav>
   </StyledFooter>
 );
 
