@@ -14,6 +14,10 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-size: 10px;
   }
+  h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+    margin: 0;
+  }
   h1 {
     font-size: calc(1em + 3.4vw);
   }
@@ -32,7 +36,7 @@ const GlobalStyles = createGlobalStyle`
   h6 {
     font-size: calc(1em + 1.4vw);
   }
-  p {
+  p, a {
     font-size: calc(1.6em + 0.3vw);
   }
 `;

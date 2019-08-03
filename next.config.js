@@ -25,7 +25,3 @@ module.exports = withPlugins([
     }
   ]
 ]);
-
-// withMDX({
-//   pageExtensions: ["js", "jsx", "md", "mdx"]
-// });

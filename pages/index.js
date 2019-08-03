@@ -1,6 +1,6 @@
-import Layout from "../components/Layout";
+import Layout from "components/Layout";
+import ContentLink from "components/ContentLink";
 import Posts from "./posts/index";
-import Link from "next/link";
 
 const Index = () => {
   const posts = Posts.map(({ meta }) => ({
@@ -9,13 +9,15 @@ const Index = () => {
     url: meta.slug,
     id: meta.id
   }));
-  console.log(posts);
   return (
     <Layout>
+      <h6>Blog Posts</h6>
       {posts.map(post => (
-        <Link href={post.url} key={post.id}>
-          <a>{post.title}</a>
-        </Link>
+        <ContentLink
+          url={post.url}
+          text={post.title}
+          key={post.id}
+        ></ContentLink>
       ))}
     </Layout>
   );
