@@ -25,6 +25,22 @@ const StyledNav = Styled.nav`
     justify-content: space-between;
 `;
 
+const StyledHeaderLinks = Styled.div`
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  a {
+    display: inline-block;
+    margin-left: 1rem;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease-in-out all;
+    &:hover {
+      border-bottom: 2px solid;
+    }
+  }
+`;
+
 const Header = () => (
   <StyledHeader className="site-header">
     <StyledNav>
@@ -33,37 +49,27 @@ const Header = () => (
           <a>⚡JED</a>
         </Link>
       </HeaderLogo>
-      <List>
-        <li>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/projects">
-            <a>Projects</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </li>
-        <li className="hidden-mobile">
-          <Link href="https://github.com/jacobedawson">
-            <a>
-              <Icon type="Github" height="24" width="24"></Icon>
-            </a>
-          </Link>
-        </li>
-        <li className="hidden-mobile">
-          <Link href="https://twitter.com/jacobedawson">
-            <a>
-              <Icon type="Twitter" height="24" width="24"></Icon>
-            </a>
-          </Link>
-        </li>
-      </List>
+      <StyledHeaderLinks>
+        <Link href="/blog">
+          <a>Blog</a>
+        </Link>
+        <Link href="/projects">
+          <a>Projects</a>
+        </Link>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
+        <Link href="https://github.com/jacobedawson">
+          <a className="hidden-mobile">
+            <Icon type="Github" height="24" width="24"></Icon>
+          </a>
+        </Link>
+        <Link href="https://twitter.com/jacobedawson">
+          <a className="hidden-mobile">
+            <Icon type="Twitter" height="24" width="24"></Icon>
+          </a>
+        </Link>
+      </StyledHeaderLinks>
     </StyledNav>
   </StyledHeader>
 );
