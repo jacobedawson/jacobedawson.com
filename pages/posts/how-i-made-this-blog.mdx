@@ -14,7 +14,14 @@ export const meta = {
   id: 3
 };
 
-export default ({ children }) => <Layout title={meta.title}>{children}</Layout>;
+export default ({ children }) => (
+  <Layout
+    description="Jacob E. Dawson | Front-End Developer"
+    title={meta.title}
+  >
+    {children}
+  </Layout>
+);
 
 # How I Made This Blog
 

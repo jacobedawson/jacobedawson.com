@@ -19,7 +19,10 @@ const Index = () => {
     id: post.id
   }));
   return (
-    <Layout>
+    <Layout
+      title="Jacob E. Dawson | Home"
+      description="Jacob E. Dawson | Front-End Developer"
+    >
       <section>
         <h1>Hey!</h1>
         <p>

@@ -10,7 +10,10 @@ const Blog = () => {
     id: post.id
   }));
   return (
-    <Layout>
+    <Layout
+      title="Jacob E. Dawson | Blog"
+      description="Jacob E. Dawson | Front-End Developer"
+    >
       <h4>Blog</h4>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus

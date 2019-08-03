@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 import Content from "./Content";
@@ -62,6 +63,15 @@ const StyledContainer = Styled.div`
 const Layout = props => (
   <StyledContainer className="site-container">
     <GlobalStyles />
+    <Head>
+      <title>
+        {props.title ? `${props.title} | ` : ""}
+        Fi Studio
+      </title>
+      {props.description ? (
+        <meta name="description" content={props.description} />
+      ) : null}
+    </Head>
     <Header />
     <Content>{props.children}</Content>
     <Footer />

@@ -2,7 +2,10 @@ import Layout from "components/Layout";
 import Image from "components/Image";
 
 const About = () => (
-  <Layout>
+  <Layout
+    title="Jacob E. Dawson | About"
+    description="Jacob E. Dawson | Front-End Developer"
+  >
     <h4>About Me</h4>
     <Image src="static/images/profile/jake.jpg" />
     <p>

@@ -12,7 +12,14 @@ export const meta = {
   id: 2
 };
 
-export default ({ children }) => <Layout title={meta.title}>{children}</Layout>;
+export default ({ children }) => (
+  <Layout
+    description="Jacob E. Dawson | Front-End Developer"
+    title={meta.title}
+  >
+    {children}
+  </Layout>
+);
 
 # The Queen of Ice
 
