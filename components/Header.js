@@ -49,14 +49,14 @@ const Header = () => (
             <a>About</a>
           </Link>
         </li>
-        <li>
+        <li className="hidden-mobile">
           <Link href="https://github.com/jacobedawson">
             <a>
               <Icon type="Github" height="24" width="24"></Icon>
             </a>
           </Link>
         </li>
-        <li>
+        <li className="hidden-mobile">
           <Link href="https://twitter.com/jacobedawson">
             <a>
               <Icon type="Twitter" height="24" width="24"></Icon>

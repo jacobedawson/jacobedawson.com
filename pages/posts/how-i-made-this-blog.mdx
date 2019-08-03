@@ -1,0 +1,21 @@
+import Layout from "components/Layout";
+import Image from "components/Image";
+import _1984 from "static/images/1984.jpg";
+
+export const meta = {
+  title: "How I made this blog",
+  tags: ["nextjs", "mdx", "react"],
+  layout: "post",
+  published: "2019-08-03",
+  modifiedDate: true,
+  seoDescription: "How I made this blog",
+  exclude: false,
+  slug: "/posts/how-i-made-this-blog",
+  id: 3
+};
+
+export default ({ children }) => <Layout title={meta.title}>{children}</Layout>;
+
+# How I Made This Blog
+
+This blog is made with Next & MDX.

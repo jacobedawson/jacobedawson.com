@@ -21,7 +21,7 @@ const Index = () => {
   return (
     <Layout>
       <section>
-        <h6>Hey!</h6>
+        <h1>Hey!</h1>
         <p>
           I&apos;m Jake, a Front-End Developer & JavaScript Ecosystem Explorer
         </p>

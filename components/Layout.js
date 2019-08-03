@@ -2,6 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Content from "./Content";
 import Styled, { createGlobalStyle } from "styled-components";
+import { mediaQueries } from "style/mediaQueries";
 
 const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
@@ -21,6 +22,8 @@ const GlobalStyles = createGlobalStyle`
   }
   h1 {
     font-size: calc(1em + 3.4vw);
+    line-height: 1.2;
+    margin-bottom: calc(1rem + .3vw);
   }
   h2 {
     font-size: calc(1em + 3vw);
@@ -42,6 +45,11 @@ const GlobalStyles = createGlobalStyle`
   }
   a {
     color: teal;
+  }
+  @media ${mediaQueries.mobile} {
+    .hidden-mobile {
+      display: none !important;
+    }
   }
 `;
 
