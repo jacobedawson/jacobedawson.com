@@ -1,9 +1,12 @@
 import Styled from "styled-components";
+import ReactSVG from "react-svg";
 
-const StyledSVG = Styled.svg`
-  width: 24px;
-  height: 24px;
-  display: block;
+const StyledSVG = Styled(ReactSVG)`
+  svg {
+    width: 24px;
+    height: 24px;
+    display: block; 
+  }
   path {
     fill: #5b5b5b;
   }
@@ -21,18 +24,11 @@ const StyledSVG = Styled.svg`
     }
 `;
 
-const Icon = ({ children, title, width, height }) => (
-    <StyledSVG
-    className={title}
-    role="img"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-    width={width}
-    height={height}
-  >
-    <title>{title}</title>
-        { children }
-    </StyledSVG>
-)
+const Icon = ({ type }) => (
+  <StyledSVG
+    className={type}
+    src={`static/icons/${type.toLowerCase()}.svg`}
+  ></StyledSVG>
+);
 
 export default Icon;

@@ -13,10 +13,14 @@ const Index = () => {
     <Layout>
       <section>
         <h6>Hey!</h6>
-        <p>I'm Jake, a Front-End Developer & JavaScript Ecosystem Explorer</p>
+        <p>
+          I&apos;m Jake, a Front-End Developer & JavaScript Ecosystem Explorer
+        </p>
         <ul style={{ listStyle: "none" }}>
           <li>
-            <p>🌏 I&apos;m from Sydney, Australia and live in Berlin, Germany</p>
+            <p>
+              🌏 I&apos;m from Sydney, Australia and live in Berlin, Germany
+            </p>
           </li>
           <li>
             <p>⌨ Currently: Front-End Dev @ 3T Software Labs</p>
