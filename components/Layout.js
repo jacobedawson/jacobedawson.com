@@ -60,20 +60,15 @@ const StyledContainer = Styled.div`
   flex-direction: column;
 `;
 
-const Layout = props => (
+const Layout = ({ title, description, children }) => (
   <StyledContainer className="site-container">
     <GlobalStyles />
     <Head>
-      <title>
-        {props.title ? `${props.title} | ` : ""}
-        Fi Studio
-      </title>
-      {props.description ? (
-        <meta name="description" content={props.description} />
-      ) : null}
+      <title>{title ? `${title} | ` : ""}</title>
+      {description ? <meta name="description" content={description} /> : null}
     </Head>
     <Header />
-    <Content>{props.children}</Content>
+    <Content>{children}</Content>
     <Footer />
   </StyledContainer>
 );
