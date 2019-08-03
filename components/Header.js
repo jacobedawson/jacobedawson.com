@@ -1,7 +1,6 @@
 import Styled from "styled-components";
 import Link from "next/link";
 import Icon from "components/Icon";
-import List from "components/List";
 
 const StyledHeader = Styled.header`
     padding: 2rem 0;
