@@ -27,7 +27,10 @@ module.exports = withPlugins([
   {
     exportPathMap: function() {
       return {
-        "/": { page: "/" }
+        "/": { page: "/" },
+        "/about": { page: "/about" },
+        "/projects": { page: "/projects" },
+        "/blog": { page: "/blog" }
       };
     }
   }
