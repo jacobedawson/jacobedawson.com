@@ -23,15 +23,16 @@ module.exports = withPlugins([
       mozjpeg: {},
       optipng: {}
     }
-  ],
-  {
-    exportPathMap: function() {
-      return {
-        "/": { page: "/" },
-        "/about": { page: "/about" },
-        "/projects": { page: "/projects" },
-        "/blog": { page: "/blog" }
-      };
-    }
-  }
+  ]
+  // ,
+  // {
+  //   exportPathMap: function() {
+  //     return {
+  //       "/": { page: "/" },
+  //       "/about": { page: "/about" },
+  //       "/projects": { page: "/projects" },
+  //       "/blog": { page: "/blog" }
+  //     };
+  //   }
+  // }
 ]);
