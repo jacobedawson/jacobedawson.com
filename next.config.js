@@ -23,5 +23,12 @@ module.exports = withPlugins([
       mozjpeg: {},
       optipng: {}
     }
-  ]
+  ],
+  {
+    exportPathMap: function() {
+      return {
+        "/": { page: "/" }
+      };
+    }
+  }
 ]);

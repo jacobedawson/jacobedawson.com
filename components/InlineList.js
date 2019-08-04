@@ -1,4 +1,5 @@
 import Styled from "styled-components";
+import { mediaQueries } from "style/mediaQueries";
 
 const StyledUL = Styled.ul`
     list-style: none;
@@ -7,10 +8,10 @@ const StyledUL = Styled.ul`
     display: inline-block;
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
+    min-width: 260px;
     li {
-        margin-left: 1rem;
-        display: inline;
+        display: inline-block;
         a {
             transition: 0.3s ease-in-out all;
             text-decoration: none;
@@ -19,6 +20,9 @@ const StyledUL = Styled.ul`
                 border-bottom: 3px solid;
             }
         }
+    }
+    @media ${mediaQueries.mobile} {
+
     }
 `;
 

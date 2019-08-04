@@ -1,7 +1,7 @@
 import Styled from "styled-components";
 import { mediaQueries } from "style/mediaQueries";
 import Link from "next/link";
-import List from "components/List";
+import InlineList from "components/InlineList";
 import Icon from "components/Icon";
 
 const StyledFooter = Styled.footer`
@@ -13,7 +13,7 @@ const StyledFooterNav = Styled.nav`
   width: 90%;
   max-width: 1170px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 0 auto;
   .made-with-love {
     text-decoration: none;
@@ -37,7 +37,7 @@ const Footer = () => (
       <Link href="/posts/how-i-made-this-blog">
         <a className="made-with-love">Made w/ Next.js, MDX & 😅</a>
       </Link>
-      <List>
+      <InlineList>
         <li>
           <Link href="https://github.com/jacobedawson">
             <a>
@@ -87,7 +87,7 @@ const Footer = () => (
             </a>
           </Link>
         </li>
-      </List>
+      </InlineList>
     </StyledFooterNav>
   </StyledFooter>
 );
