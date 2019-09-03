@@ -6,7 +6,7 @@ export const meta = {
   title: "How I made this blog",
   tags: ["nextjs", "mdx", "react"],
   layout: "post",
-  published: "2019-08-03",
+  published: "2019-09-03",
   modifiedDate: true,
   seoDescription: "How I made this blog",
   exclude: false,
@@ -23,6 +23,32 @@ export default ({ children }) => (
   </Layout>
 );
 
-# How I Made This Blog
+# How I Built This Blog
 
-This blog is made with Next.js & MDX.
+Over the past couple of years I've written a few blog posts and published them on Medium, mainly because the writing & publishing experience on Medium was generally straightforward and friction-free. However, recently I became concerned about vendor lock-in, frustrated with Medium's ridiculous commenting system and annoyed by the pay-wall they've started using. With my dev-sense tingling it seemed like a good time to explore the static-site ecosystem, since a large number of interesting options have been generating buzz lately..
+
+## Criteria
+
+My criteria for choosing a tech stack was the following:
+
+- The stack should be light-weight
+- I'd prefer to write in Markdown and code in JS
+- Deployment should be simple
+- I should be able to achieve a 95+ Pagespeed score on desktop & mobile without too much hassle
+- A solid community & good documentation would be nice :)
+
+## Gatsby vs Next.js vs Hugo vs...
+
+The big names in the static site space are Hugo, Next.js, Nuxt, Gatsby and Jekyll. But scratch the surface and you'll find 10s and even hundreds of other options - a site like [staticgen](https://www.staticgen.com/) lists more than you could ever hope to try out. While Jekyll and Hugo have great reputations, at this point I didn't want to further complicate things by having to deal with Ruby or Go, so that ruled them out. I have experience with Vue but I was also hoping to improve my React skills, so I crossed Next and VuePress off the list.
+
+After reviewing a number of choices I narrowed down the field to Gatsby and Next.js. Gatsby has rocketed into the JAMstack conversation as a favourite static site generator, and it integrates with Markdown via MDX, plus it has lots of plug-n-play integrations that make it an attractive option. I recently did Jason Lengstorf's Gatsby course on Front-End Masters to get a feel for it, and while I was impressed with some features and appreciated how easy it was in some parts, I didn't _love_ the fact I'd have to rely heavily on GraphQL in order to make a super simple website with blog posts. I think GraphQL has some really exciting capabilities but I'm also weary of the 'hammer' approach of using complex technology to achieve simple tasks - to do a simple thing like write a blog IMO you shouldn't need to jump on the latest bleeding-edge tech.
+
+The other option I was seriously considering was Next.js. The team at Zeit have been pumping out amazing products for a few years now and Next.js's approach made it dead simple to get a website up & running, while also including the ability to work with Styled Components (or Emotion, et al) and MDX.
+
+- Setting up the foundation
+- Getting a list of posts
+- Adding image support
+- Styling & layout with Styled Components
+- Media Queries w/ Styled Components
+- Deploying to Netlify (Links to pages not working)
+- Deploying to Now with the Now CLI
