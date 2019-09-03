@@ -39,53 +39,39 @@ const Footer = () => (
       </Link>
       <InlineList>
         <li>
-          <Link href="https://github.com/jacobedawson">
-            <a>
-              <Icon type="Github" height="24" width="24"></Icon>
-            </a>
-          </Link>
+          <a href="https://github.com/jacobedawson">
+            <Icon type="Github" height="24" width="24"></Icon>
+          </a>
         </li>
         <li>
-          <Link href="https://twitter.com/jacobedawson">
-            <a>
-              <Icon type="Twitter" height="24" width="24"></Icon>
-            </a>
-          </Link>
+          <a href="https://twitter.com/jacobedawson">
+            <Icon type="Twitter" height="24" width="24"></Icon>
+          </a>
         </li>
         <li>
-          <Link href="https://www.linkedin.com/in/jacobdawson">
-            <a>
-              <Icon type="LinkedIn" height="24" width="24"></Icon>
-            </a>
-          </Link>
+          <a href="https://www.linkedin.com/in/jacobdawson">
+            <Icon type="LinkedIn" height="24" width="24"></Icon>
+          </a>
         </li>
         <li>
-          <Link href="https://facebook.com/jacobedawson">
-            <a>
-              <Icon type="Facebook" height="24" width="24"></Icon>
-            </a>
-          </Link>
+          <a href="https://facebook.com/jacobedawson">
+            <Icon type="Facebook" height="24" width="24"></Icon>
+          </a>
         </li>
         <li>
-          <Link href="https://www.reddit.com/user/jacobedawson">
-            <a>
-              <Icon type="Reddit" height="24" width="24"></Icon>
-            </a>
-          </Link>
+          <a href="https://www.reddit.com/user/jacobedawson">
+            <Icon type="Reddit" height="24" width="24"></Icon>
+          </a>
         </li>
         <li>
-          <Link href="https://medium.com/@jacobedawson">
-            <a>
-              <Icon type="Medium" height="24" width="24"></Icon>
-            </a>
-          </Link>
+          <a href="https://medium.com/@jacobedawson">
+            <Icon type="Medium" height="24" width="24"></Icon>
+          </a>
         </li>
         <li>
-          <Link href="https://stackoverflow.com/users/1405255/jacobedawson">
-            <a>
-              <Icon type="StackOverflow" height="24" width="24"></Icon>
-            </a>
-          </Link>
+          <a href="https://stackoverflow.com/users/1405255/jacobedawson">
+            <Icon type="StackOverflow" height="24" width="24"></Icon>
+          </a>
         </li>
       </InlineList>
     </StyledFooterNav>

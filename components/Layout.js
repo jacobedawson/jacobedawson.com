@@ -41,8 +41,14 @@ const GlobalStyles = createGlobalStyle`
   h6 {
     font-size: calc(1em + 1.4vw);
   }
-  p, a {
+  p {
+    margin-bottom: 1em;
+  }
+  p, a, li {
     font-size: calc(1.6em + 0.3vw);
+    a {
+      font-size: 1em;
+    }
   }
   a {
     color: teal;
@@ -64,7 +70,11 @@ const Layout = ({ title, description, children }) => (
   <StyledContainer className="site-container">
     <GlobalStyles />
     <Head>
-      <title>{title ? `${title} | ` : ""}</title>
+      <title>
+        {title
+          ? `${title} | Jacob E. Dawson - JavaScript Ecosystem Explorer`
+          : ""}
+      </title>
       {description ? <meta name="description" content={description} /> : null}
     </Head>
     <Header />

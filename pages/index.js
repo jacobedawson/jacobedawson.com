@@ -30,22 +30,12 @@ const Index = () => {
         </p>
         <StyledUL>
           <li>
-            <p>
-              🌏 I&apos;m from Sydney, Australia and live in Berlin, Germany
-            </p>
+            🌏 I&apos;m from Sydney, Australia and live in Berlin, Germany
           </li>
-          <li>
-            <p>⌨ Currently: Front-End Dev @ 3T Software Labs</p>
-          </li>
-          <li>
-            <p>📈 Formerly: Conversion Rate Optimizer @ Delivery Hero</p>
-          </li>
-          <li>
-            <p>⚛️ 7 Years & Counting as a JS Dev</p>
-          </li>
-          <li>
-            <p>🎸 I have a Bachelor of Music for some reason 🤷</p>
-          </li>
+          <li>⌨ Currently: Front-End Dev @ 3T Software Labs</li>
+          <li>📈 Formerly: Conversion Rate Optimizer @ Delivery Hero</li>
+          <li>⚛️ 7 Years & Counting as a JS Dev</li>
+          <li>🎸 I have a Bachelor of Music for some reason 🤷</li>
         </StyledUL>
       </section>
       <section
