@@ -1,0 +1,61 @@
+import Layout from "components/Layout";
+
+export const meta = {
+  title: "Adding an External API Subdomain to Zeit Now Projects",
+  tags: ["zeit", "api", "dns"],
+  layout: "post",
+  published: "2019-10-08",
+  modifiedDate: true,
+  seoDescription:
+    "In this quick post I show you how to add an api subdomain to Zeit that points to an external server",
+  exclude: false,
+  slug: "/posts/add-external-api-subdomain-zeit",
+  id: 2
+};
+
+export default ({ children }) => (
+  <Layout
+    description="Jacob E. Dawson | Front-End Developer"
+    title={meta.title}
+  >
+    {children}
+  </Layout>
+);
+
+# Adding an External API Subdomain to Zeit Now Projects
+
+This will be a quick one, but will hopefully help anyone going through the Google / Github / StackOverflow vortex of doom trying to find a succinct answer as to how to add an external api to a Zeit Now project :)
+
+The Scenario: We have a front-end project that we host on Zeit Now. We have a back-end server hosted somewhere else, like on AWS Lightsail or Digital Ocean. We are own the domain example.com and have pointed the domain at the Zeit Now nameservers.
+
+The Goal: We want api.example.com to point to our back-end server...
+
+If you've added your main domain to Zeit and pointed your domain at the Zeit nameservers, the next step can be a little confusing at first. I went through the Zeit Now dashboard a few times and couldn't find a way to easily add subdomains and point them at external services, until I realized that Zeit puts the emphasis on using the Now CLI, and suddenly things made a lot more sense. The detailed instructions can be found here: https://zeit.co/docs/v2/advanced/domains/dns#using-now-cli/now-dns-add
+
+It's way simpler than it seems :)
+
+1. In the Now CLI, you can first check your current config with the following command:
+
+`now dns ls`
+
+2. Then you can add a new record with this command syntax
+
+`now dns add <domain> <name> <record type> <value>`
+
+- For example:
+
+`now dns add mytoplevel.com subdomain A 127.0.0.1`
+
+The above code would add a subdomain to your top level domain and point it as an A record to 127.0.0.1 (of course that would be the server IP address or another domain name).
+
+- Here's one more example to make it clear:
+
+`now dns add example.com api A 127.0.0.1`
+
+The above code will make api.example.com point to 127.0.0.1 with an A record controlled by Zeit's DNS.
+
+That's pretty much it. The big thing that I didn't realize at first was:
+
+> Once you've pointed your domain at the Zeit nameservers, you can control pretty much anything via the Now CLI
+
+I hope that helps 🙋
